@@ -1,6 +1,7 @@
-// backend/api/contact.js
 require('dotenv').config();
 const nodemailer = require('nodemailer');
+const { rules, IDS_OPTIONS } = require('../ids.config');
+const fetch = require('node-fetch'); // if you plan to alert via webhook
 
 module.exports = async (req, res) => {
   // CORS preflight
@@ -17,8 +18,33 @@ module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
   try {
-    const { name, email, subject, message } = req.body;
+    const { name = '', email = '', subject = '', message = '' } = req.body;
     console.log('📬 payload:', req.body);
+
+    // IDS scan
+    const payload = `${name}${subject}${message}`;
+    for (const { id, name: ruleName, regex } of rules) {
+      if (regex.test(payload)) {
+        const snippet = payload.slice(0, IDS_OPTIONS.logSnippetLen);
+        console.warn(`🛡️ [IDS:${id}] ${ruleName}`, {
+          ip: req.headers['x-forwarded-for'] || req.socket.remoteAddress,
+          snippet,
+        });
+
+        if (process.env.IDS_ALERT_WEBHOOK) {
+          fetch(process.env.IDS_ALERT_WEBHOOK, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ruleId: id, ruleName, ip: req.headers['x-forwarded-for'], snippet }),
+          }).catch(console.error);
+        }
+
+        const shouldBlock = process.env.IDS_BLOCK === 'true' || IDS_OPTIONS.blockOnMatch;
+        if (shouldBlock) {
+          return res.status(400).json({ success: false, error: `Blocked by IDS rule: ${ruleName}` });
+        }
+      }
+    }
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
