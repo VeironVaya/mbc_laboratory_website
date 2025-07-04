@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.0.1",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.4"
   }
 }
