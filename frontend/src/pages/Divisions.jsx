@@ -30,12 +30,11 @@ const divisions = [
 export default function Divisions() {
   return (
     <div className="px-4 py-12 lg:px-0 space-y-12">
-      {/* Page title */}
+
       <h2 className="text-3xl md:text-4xl font-bold text-center">
         Our Divisions
       </h2>
 
-      {/* Vertical list of full‑width cards */}
       <div className="space-y-8">
         {divisions.map(({ id, title, description }, idx) => (
           <section
