@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1001,
+      "name": "XSS <script>",
+      "regex": "<script.*?>",
+      "flags": "i"
+    },
+    {
+      "id": 1002,
+      "name": "SQL Injection keywords",
+      "regex": "\\b(union|select|drop)\\b",
+      "flags": "i"
+    },
+    {
+      "id": 1003,
+      "name": "Directory traversal",
+      "regex": "\\.\\./+",
+      "flags": ""
+    }
+  ]
+  
