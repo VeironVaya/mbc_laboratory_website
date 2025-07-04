@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="space-y-20 px-4 py-12 lg:px-0">
       <section className="bg-gray-50   rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center">
+        <h1 className="text-xl md:text-5xl font-extrabold text-center">
           <span className="text-red-600">#WeAttack</span>WeProtect
         </h1>
         <p className="mt-4 text-gray-700 text-center leading-relaxed">
