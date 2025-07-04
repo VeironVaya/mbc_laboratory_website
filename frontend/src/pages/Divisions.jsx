@@ -5,25 +5,25 @@ const divisions = [
     id: 'cyber',
     title: 'Cyber Security',
     description:
-      'Laboratorium Cyber Security fokus pada penelitian dan pengembangan teknik pertahanan siber, penetrasi sistem, serta forensik digital untuk menjaga integritas, kerahasiaan, dan ketersediaan data.',
+      'Divisi Cyber Security fokus pada penelitian dan pengembangan teknik pertahanan siber, penetrasi sistem, serta forensik digital untuk menjaga integritas, kerahasiaan, dan ketersediaan data. Dengan prospek karir yang meliputi: Cybersecurity Analyst, Digital Forensic,SOC Analyst,Penetration Tester dan Security Engineer',
   },
   {
     id: 'gametech',
     title: 'Game Tech',
     description:
-      'Divisi Game Tech menggabungkan multimedia dan interaksi pengguna, menghadirkan prototipe game edukatif serta simulasi real‑time dengan engine terkini.',
+      'Divisi Game Tech menggabungkan multimedia dan interaksi pengguna, menghadirkan prototipe game edukatif serta simulasi real‑time dengan engine terkini. Dengan prospek karir yang meliputi: Animator(2D/3D), Game Designer,Artist(2D/3D),Audio Designer,Game Programmer',
   },
   {
     id: 'gis',
     title: 'Geographic Information System',
     description:
-      'GIS Lab mengembangkan sistem pemetaan dan analisis spasial, mendukung visualisasi data geolokasi untuk smart city dan pengambilan keputusan berbasis lokasi.',
+      'Divisi GIS mengembangkan sistem pemetaan dan analisis spasial, mendukung visualisasi data geolokasi untuk smart city dan pengambilan keputusan berbasis lokasi. Dengan prospek karir: Spasial Analyst,Penata Tata Ruangan Kota,Surveyor,GIS Specialist,Webgis Developer (Startup)',
   },
   {
     id: 'bigdata',
     title: 'Big Data',
     description:
-      'Pada Big Data, kami merancang pipeline analitik untuk volume data besar, meliputi arsitektur data lake, pemodelan machine learning, dan dashboard visualisasi.',
+      'Divisi Big Data, kami merancang pipeline analitik untuk volume data besar, meliputi arsitektur data lake, pemodelan machine learning, dan dashboard visualisasi. Dengan prospek karir: Machine Learning Engineer, Data Scientist, Data Analyst, Data Engineer',
   },
 ];
 
