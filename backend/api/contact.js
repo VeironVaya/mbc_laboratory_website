@@ -1,9 +1,9 @@
-// backend/api/contact.js
+
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 module.exports = async (req, res) => {
-  // CORS preflight
+
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
