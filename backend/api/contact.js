@@ -1,7 +1,7 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 const { rules, IDS_OPTIONS } = require('../ids.config');
-const fetch = require('node-fetch'); // if you plan to alert via webhook
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 module.exports = async (req, res) => {
   // CORS preflight
