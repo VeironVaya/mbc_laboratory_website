@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // mount your contact router
-app.use('/api/contact', contactRoute);
+app.use('/', contactRoute);
 
 // export as a serverless function
 module.exports = serverless(app);
