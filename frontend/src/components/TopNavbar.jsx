@@ -13,7 +13,6 @@ export default function TopNavbar() {
     <header>
       <nav className="bg-gray-100 shadow-sm" aria-label="Main navigation">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
-          {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-3 flex-shrink-0">
             <img
               src={logo}
@@ -22,7 +21,6 @@ export default function TopNavbar() {
             />
           </NavLink>
 
-          {/* Navigation Links */}
           <div className="flex items-center space-x-6">
             <ul className="hidden md:flex space-x-8">
               {links.map((link) => (
@@ -41,7 +39,6 @@ export default function TopNavbar() {
               ))}
             </ul>
 
-            {/* Highlighted Contact Us Button */}
             <NavLink
               to="/contact"
               className="hidden md:inline-block bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded transition-colors whitespace-nowrap"
