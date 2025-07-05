@@ -25,6 +25,10 @@
     - [6.1. ids-rules.json](#61-ids-rulesjson)
     - [6.2. ids.config.js](#62-idsconfigjs)
     - [6.3. api/contact.js (Pemindaian IDS)](#63-apicontactjs-pemindaian-ids)
+  - [7. View](#7-view)
+    - [7.1. Desktop](#71-desktop)
+    - [7.2. Mobile](#72-mobile)
+    - [7.3 Sukses](#73-sukses)
 
 ## 1. Struktur Proyek
 
@@ -154,6 +158,9 @@ Jadi sertifikat SSL diatur otomatis oleh Vercel ketika saya deploy, website ini 
 6. Pengguna melihat “Berhasil mengirim pesan".
 
 ## 6. Konfigurasi & Keamanan IDS
+<p align="left">
+  <img src="../assets/pentest.png" alt="cSuccess" width="1000"/>
+</p>
 
 ### 6.1. ids-rules.json
 
@@ -282,3 +289,59 @@ module.exports = async (req, res) => {
 2. Uji tiap aturan: Loop melalui aturan; jalankan regex.test(payload).
 3. Jika cocok: Tampilkan log peringatan, kirim ke webhook jika diset, blokir request (400 Bad Request).
 4. Jika tidak ada aturan yang aktif: Lanjutkan pengiriman email seperti biasa.
+
+## 7. View
+### 7.1. Desktop
+<p align="left">
+  <img src="../assets/big_home.png" alt="home" width="1000"/>
+</p>
+<p align="left">
+  <img src="../assets/big_div.png" alt="division" width="1000"/>
+</p>
+<p align="left">
+  <img src="../assets/big_dev.png" alt="developer" width="1000"/>
+</p>
+<p align="left">
+  <img src="../assets/big_contact.png" alt="contact" width="1000"/>
+</p>
+<p align="left">
+  <img src="../assets/big_contact_sending.png" alt="cSending" width="1000"/>
+</p>
+<p align="left">
+  <img src="../assets/big_contact_success.png" alt="cSuccess" width="1000"/>
+</p>
+
+### 7.2. Mobile
+
+<p align="left">
+  <img src="../assets/small_navbar.jpeg" alt="navbar" width="500"/>
+</p>
+<p align="left">
+  <img src="../assets/small_home.jpg" alt="home" width="500"/>
+</p>
+<p align="left">
+  <img src="../assets/small_div.jpg" alt="division" width="500"/>
+</p>
+<p align="left">
+  <img src="../assets/small_dev.jpg" alt="developer" width="500"/>
+</p>
+<p align="left">
+  <img src="../assets/small_contact.jpg" alt="contact" width="500"/>
+</p>
+<p align="left">
+  <img src="../assets/small_contact_sending.jpg" alt="cSending" width="500"/>
+</p>
+<p align="left">
+  <img src="../assets/small_contact_success.jpg" alt="cSuccess" width="500"/>
+</p>
+
+### 7.3 Sukses
+
+<p align="left">
+  <img src="../assets/success.png" alt="success" width="1000"/>
+</p>
+<p align="left">
+  <img src="../assets/success_detail.png" alt="successD" width="1000"/>
+</p>
+
+
