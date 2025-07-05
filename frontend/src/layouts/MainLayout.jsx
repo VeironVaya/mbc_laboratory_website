@@ -7,7 +7,6 @@ export default function MainLayout() {
     <>
       <TopNavbar />
       <main className="container mx-auto py-8">
-        {/* This is where <Route> elements’ element= will render */}
         <Outlet />
       </main>
     </>
